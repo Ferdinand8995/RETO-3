@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.example.demo.Service;
 
 import com.example.demo.Model.Car;
@@ -69,7 +65,7 @@ public class CarService {
 
     }
                             public boolean deleteCar(int id){
-                            boolean respuesta = getCar(id).map(car -> {
+                            Boolean respuesta = getCar(id).map(car -> {
                               carRepository.delete(car);
                               return true;
                               }).orElse(false);

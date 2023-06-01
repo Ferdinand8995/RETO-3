@@ -63,7 +63,7 @@ public class GamaService {
 
     }
                             public boolean deleteGama(int id){
-                            boolean respuesta = getGama(id).map(gama -> {
+                            Boolean respuesta = getGama(id).map(gama -> {
                               gamaRepository.delete(gama);
                               return true;
                               }).orElse(false);
